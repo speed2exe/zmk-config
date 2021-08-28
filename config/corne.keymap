@@ -15,15 +15,19 @@
 #define fn 4
 #define _bt 5
 
-&lt {
-    tapping-term-ms = <1024>;
-};
-
-&mt {
-    tapping-term-ms = <1024>;
-};
-
 / {
+    behaviors {
+        ht: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <1024>;
+            quick_tap_ms = <-1>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -42,14 +46,14 @@
     &to def     &kp W       &kp L       &kp R       &kp B       &kp Z
         &kp SEMI        &kp Q       &kp U       &kp D       &kp J       &to nav
 
-    &kp GRAVE       &mt LCTRL S     &mt LALT H      &mt LSHFT N     &mt LGUI T     &kp COMMA
-        &kp DOT     &mt RGUI A      &mt RSHFT E     &mt RALT O      &mt RCTRL I     &kp APOS
+    &kp GRAVE       &ht LCTRL S     &ht LALT H      &ht LSHFT N     &ht LGUI T     &kp COMMA
+        &kp DOT     &ht RGUI A      &ht RSHFT E     &ht RALT O      &ht RCTRL I     &kp APOS
 
     &kp CLCK       &kp F       &kp M       &kp V       &kp C       &kp SLASH 
         &kp G       &kp P       &kp X       &kp K       &kp Y       &to num
                   
-    &lt nav TAB     &lt num SPACE       &lt _bt ESC
-        &kp RET     &lt sym SPACE       &lt fn BSPC
+    &ht nav TAB     &ht num SPACE       &ht _bt ESC
+        &kp RET     &ht sym SPACE       &ht fn BSPC
                         >;
                 };
                 
