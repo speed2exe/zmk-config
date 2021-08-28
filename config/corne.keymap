@@ -46,7 +46,7 @@
         &kp DOT     &mt RGUI A      &mt RSHFT E     &mt RALT O      &mt RCTRL I     &kp APOS
 
     &kp CLCK       &kp F       &kp M       &kp V       &kp C       &kp SLASH 
-        &kp G       &kp P       &kp X       &kp K       &kp Y       &kp &to num
+        &kp G       &kp P       &kp X       &kp K       &kp Y       &to num
                   
     &lt nav TAB     &lt num SPACE       &lt _bt ESC
         &kp RET     &lt sym SPACE       &lt fn BSPC
