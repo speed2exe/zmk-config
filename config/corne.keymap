@@ -15,6 +15,10 @@
 #define fn 4
 #define _bt 5
 
+&kscan0 {
+    debounce-period = <256>;
+};
+
 &lt {
     flavor = "balanced";
     tapping-term-ms = <1024>;
