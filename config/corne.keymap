@@ -16,7 +16,7 @@
 #define _bt 5
 
 &kscan0 {
-    debounce-period = <256>;
+    debounce-period = <64>;
 };
 
 &lt {
