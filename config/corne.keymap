@@ -29,6 +29,7 @@
             mt_l: positional_hold_tap {
                 compatible = "zmk,behavior-hold-tap";
                 label = "POSITIONAL_HOLD_TAP";
+                #binding-cells = <2>;
                 flavor = "balanced";
                 tapping-term-ms = <1024>;
                 bindings = <&kp>, <&kp>;
@@ -37,6 +38,7 @@
             mt_r: positional_hold_tap {
                 compatible = "zmk,behavior-hold-tap";
                 label = "POSITIONAL_HOLD_TAP";
+                #binding-cells = <2>;
                 flavor = "balanced";
                 tapping-term-ms = <1024>;
                 bindings = <&kp>, <&kp>;
