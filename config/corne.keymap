@@ -24,17 +24,22 @@
     tapping-term-ms = <1024>;
 };
 
-&mt_l {
+&mt {
     flavor = "balanced";
     tapping-term-ms = <1024>;
-    hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
 };
 
-&mt_r {
-    flavor = "balanced";
-    tapping-term-ms = <1024>;
-    hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
-};
+//&mt_l {
+//    flavor = "balanced";
+//    tapping-term-ms = <1024>;
+//    hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
+//};
+//
+//&mt_r {
+//    flavor = "balanced";
+//    tapping-term-ms = <1024>;
+//    hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
+//};
 
 / {
         keymap {
@@ -55,8 +60,11 @@
     &to def     &kp W       &kp L       &kp R       &kp B       &kp Z
         &kp SEMI        &kp Q       &kp U       &kp D       &kp J       &to nav
 
-    &kp GRAVE       &mt_l LCTRL S     &mt_l LALT H      &mt_l LSHFT N     &mt_l LGUI T     &kp COMMA
-        &kp DOT     &mt_r RGUI A      &mt_r RSHFT E     &mt_r RALT O      &mt_r RCTRL I     &kp APOS
+    &kp GRAVE       &mt LCTRL S     &mt LALT H      &mt LSHFT N     &mt LGUI T     &kp COMMA
+        &kp DOT     &mt RGUI A      &mt RSHFT E     &mt RALT O      &mt RCTRL I     &kp APOS
+
+    //&kp GRAVE       &mt_l LCTRL S     &mt_l LALT H      &mt_l LSHFT N     &mt_l LGUI T     &kp COMMA
+    //    &kp DOT     &mt_r RGUI A      &mt_r RSHFT E     &mt_r RALT O      &mt_r RCTRL I     &kp APOS
 
     &kp CLCK       &kp F       &kp M       &kp V       &kp C       &kp SLASH 
         &kp G       &kp P       &kp X       &kp K       &kp Y       &to num
