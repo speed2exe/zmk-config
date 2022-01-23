@@ -52,77 +52,77 @@
 
                 def {
 // ┌─────┬─────┬─────┬─────┬─────┬─────┐           ┌─────┬─────┬─────┬─────┬─────┬─────┐
-// │ def │  W  │  L  │  R  │  B  │  Z  │           │  ;  │  Q  │  U  │  D  │  J  │ nav │
+// │     │  W  │  L  │  R  │  B  │  Z  │           │  ;  │  Q  │  U  │  D  │  J  │     │
 // ├─────┼─────┼─────┼─────┼─────┼─────┤           ├─────┼─────┼─────┼─────┼─────┼─────┤
-// │  `  │  S  │  H  │  N  │  T  │  ,  │           │  .  │  A  │  E  │  O  │  I  │  '  │
+// │     │  S  │  H  │  N  │  T  │  ,  │           │  .  │  A  │  E  │  O  │  I  │     │
 // ├─────┼─ c ─┼─ a ─┼─ s ─┼─ g ─┼─────┤           ├─────┼─ g ─┼─ s ─┼─ a ─┼─ c ─┼─────┤
-// │  ⇪  │  F  │  M  │  V  │  C  │  ?  │           │  G  │  P  │  X  │  K  │  Y  │ num │
+// │     │  F  │  M  │  V  │  C  │  ?  │           │  G  │  P  │  X  │  K  │  Y  │     │
 // └─────┴─────┴─────┴──┬──┴──┬──┴──┬──┴──┐     ┌──┴──┬──┴──┬──┴──┬──┴─────┴─────┴─────┘
-//                      │ Tab │ Spc │ Esc │     │ Ret │ Spc │ Bsp │
-//                      └ nav ┴ num ┴ _bt ┘     └─────┴ sym ┴ fn ─┘
+//                      │     │ Spc │ Esc │     │ Ret │ Spc │     │
+//                      └─────┴ num ┴ nav ┘     └─fn──┴ sym ┴─────┘
 
                         bindings = <
-    &to def     &kp W       &kp L       &kp R       &kp B       &kp Z
-        &kp SEMI        &kp Q       &kp U       &kp D       &kp J       &to nav
+    &trans      &kp W       &kp L       &kp R       &kp B       &kp Z
+        &kp SEMI        &kp Q       &kp U       &kp D       &kp J       &trans
 
-    &kp GRAVE       &mt_l LCTRL S     &mt_l LALT H      &mt_l LSHFT N     &mt_l LGUI T     &kp COMMA
-        &kp DOT     &mt_r RGUI A      &mt_r RSHFT E     &mt_r RALT O      &mt_r RCTRL I     &kp APOS
+    &trans       &mt_l LCTRL S     &mt_l LALT H      &mt_l LSHFT N     &mt_l LGUI T     &kp COMMA
+        &kp DOT     &mt_r RGUI A      &mt_r RSHFT E     &mt_r RALT O      &mt_r RCTRL I     &trans
 
-    &kp CLCK       &kp F       &kp M       &kp V       &kp C       &kp SLASH 
-        &kp G       &kp P       &kp X       &kp K       &kp Y       &to num
+    &trans       &kp F       &kp M       &kp V       &kp C       &kp SLASH
+        &kp G       &kp P       &kp X       &kp K       &kp Y       &trans
                   
-    &lt nav TAB     &lt num SPACE       &lt _bt ESC
-        &kp RET     &lt sym SPACE       &lt fn BSPC
+    &trans     &lt num SPACE       &lt nav ESC
+        &lt fn RET     &lt sym SPACE       &trans
                         >;
                 };
                 
                 num {
 // ┌─────┬─────┬─────┬─────┬─────┬─────┐           ┌─────┬─────┬─────┬─────┬─────┬─────┐
-// │     │     │     │     │     │     │           │  *  │  7  │  8  │  9  │  +  │     │
+// │     │     │ fn  │ sym │     │     │           │     │  7  │  8  │  9  │  0  │     │
 // ├─────┼─────┼─────┼─────┼─────┼─────┤           ├─────┼─────┼─────┼─────┼─────┼─────┤
-// │     │  c  │  a  │  s  │  g  │     │           │  0  │  4  │  5  │  6  │  -  │     │
+// │     │  c  │  a  │  s  │  g  │ Rst │           │     │  4  │  5  │  6  │  -  │     │
 // ├─────┼─────┼─────┼─────┼─────┼─────┤           ├─────┼─────┼─────┼─────┼─────┼─────┤
-// │     │     │     │     │     │     │           │  \  │  1  │  2  │  3  │  =  │     │
+// │     │     │     │ def │ cap │ BLd │           │     │  1  │  2  │  3  │  =  │     │
 // └─────┴─────┴─────┴──┬──┴──┬──┴──┬──┴──┐     ┌──┴──┬──┴──┬──┴──┬──┴─────┴─────┴─────┘
-//                      │     │     │     │     │     │     │     │
+//                      │     │ Tab │     │     │     │ Bsp │     │
 //                      └─────┴─────┴─────┘     └─────┴─────┴─────┘
 
                         bindings = <
-    &trans     &trans       &trans      &trans      &trans       &trans
-        &kp ASTRK        &kp N7      &kp N8      &kp N9      &kp PLUS        &trans
+    &trans     &trans       &to fn      &to sym      &trans       &trans
+        &trans        &kp N7      &kp N8      &kp N9      &kp N0        &trans
 
-    &trans      &kp LCTRL     &kp LALT       &kp LSHFT     &kp LGUI     &trans
-        &kp N0     &kp N4      &kp N5     &kp N6      &kp MINUS     &trans
+    &trans      &kp LCTRL     &kp LALT       &kp LSHFT     &kp LGUI     &reset
+        &trans     &kp N4      &kp N5     &kp N6      &kp MINUS     &trans
 
-    &trans     &trans       &trans      &trans      &trans       &trans
-        &kp BSLH       &kp N1       &kp N2       &kp N3       &kp EQUAL     &trans
+    &trans     &trans       &trans      &to def      &kp CLCK       &bootloader
+        &trans       &kp N1       &kp N2       &kp N3       &kp EQUAL     &trans
 
-    &trans      &trans      &trans
-        &trans      &trans      &trans
+    &trans      &kp TAB      &trans
+        &trans      &kp BSPC      &trans
 
                         >;
                 };
 
                 sym {
 // ┌─────┬─────┬─────┬─────┬─────┬─────┐           ┌─────┬─────┬─────┬─────┬─────┬─────┐
-// │     │  !  │  %  │  {  │  }  │  @  │           │     │     │     │     │     │     │
+// │     │  "  │  '  │  {  │  }  │     │           │     │     │ num │ nav │     │     │
 // ├─────┼─────┼─────┼─────┼─────┼─────┤           ├─────┼─────┼─────┼─────┼─────┼─────┤
-// │     │  _  │  ^  │  (  │  )  │  #  │           │     │  g  │  s  │  a  │  c  │     │
+// │     │  ~  │  `  │  (  │  )  │     │           │ Rst │  g  │  s  │  a  │  c  │     │
 // ├─────┼─────┼─────┼─────┼─────┼─────┤           ├─────┼─────┼─────┼─────┼─────┼─────┤
-// │     │  |  │  &  │  [  │  ]  │  $  │           │     │     │     │     │     │     │
+// │     │  |  │  \  │  [  │  ]  │     │           │ BLd │     │ def │     │     │     │
 // └─────┴─────┴─────┴──┬──┴──┬──┴──┬──┴──┐     ┌──┴──┬──┴──┬──┴──┬──┴─────┴─────┴─────┘
 //                      │     │     │     │     │     │     │     │
 //                      └─────┴─────┴─────┘     └─────┴─────┴─────┘
 
                         bindings = <
-    &trans      &kp EXCL        &kp PRCNT      &kp LBRC      &kp RBRC       &kp AT
-        &trans     &trans       &trans      &trans      &trans       &trans
+    &trans      &kp DQT        &kp SQT      &kp LBRC      &kp RBRC       &trans
+        &trans     &trans       &to num      &to nav      &trans       &trans
 
-    &trans      &kp UNDER        &kp CARET      &kp LPAR      &kp RPAR       &kp HASH
-        &trans     &kp RGUI        &kp RSHFT        &kp RALT        &kp RCTRL      &trans
+    &trans      &kp TILDE        &kp GRAVE      &kp LPAR      &kp RPAR       &trans
+        &reset     &kp RGUI        &kp RSHFT        &kp RALT        &kp RCTRL      &trans
 
-    &trans      &kp PIPE        &kp AMPS      &kp LBKT      &kp RBKT       &kp DLLR
-        &trans     &trans       &trans      &trans      &trans       &trans
+    &trans      &kp PIPE        &kp BSLH      &kp LBKT      &kp RBKT       &trans
+        &bootloader     &trans       &to dev      &trans      &trans       &trans
 
     &trans      &trans      &trans
         &trans      &trans      &trans
@@ -133,9 +133,9 @@
 // ┌─────┬─────┬─────┬─────┬─────┬─────┐           ┌─────┬─────┬─────┬─────┬─────┬─────┐
 // │     │     │     │     │     │     │           │ Ins │ Mut │  ↑  │ VlU │ VlD │     │
 // ├─────┼─────┼─────┼─────┼─────┼─────┤           ├─────┼─────┼─────┼─────┼─────┼─────┤
-// │     │  c  │  a  │  s  │  g  │     │           │ Del │  ←  │  ↓  │  →  │ BrU │     │
+// │     │  c  │  a  │  s  │  g  │ BtC │           │ Del │  ←  │  ↓  │  →  │ BrU │     │
 // ├─────┼─────┼─────┼─────┼─────┼─────┤           ├─────┼─────┼─────┼─────┼─────┼─────┤
-// │     │     │     │     │     │     │           │ Hom │ PgD │ PgU │ End │ BrD │     │
+// │     │ Bt0 │ Bt1 │ Bt2 │ Bt3 │ Bt4 │           │ Hom │ PgD │ PgU │ End │ BrD │     │
 // └─────┴─────┴─────┴──┬──┴──┬──┴──┬──┴──┐     ┌──┴──┬──┴──┬──┴──┬──┴─────┴─────┴─────┘
 //                      │     │     │     │     │     │     │     │
 //                      └─────┴─────┴─────┘     └─────┴─────┴─────┘
@@ -144,10 +144,10 @@
     &trans     &trans       &trans      &trans      &trans       &trans
         &kp INS        &kp K_MUTE      &kp UP      &kp C_VOL_UP      &kp C_VOL_DN        &trans
 
-    &trans      &kp LCTRL     &kp LALT       &kp LSHFT     &kp LGUI     &trans
+    &trans      &kp LCTRL     &kp LALT       &kp LSHFT     &kp LGUI     &bt BT_CLR
         &kp DEL     &kp LEFT      &kp DOWN     &kp RIGHT      &kp C_BRI_UP     &trans
 
-    &trans     &trans       &trans      &trans      &trans       &trans
+    &trans     &bt BT_SEL 0       &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3       &bt BT_SEL 4
         &kp HOME       &kp PG_DN       &kp PG_UP        &kp END       &kp C_BRI_DN     &trans
 
     &trans      &trans      &trans
@@ -180,32 +180,3 @@
         &trans      &trans      &trans
                         >;
                 };
-
-                _bt {
-// ┌─────┬─────┬─────┬─────┬─────┬─────┐           ┌─────┬─────┬─────┬─────┬─────┬─────┐
-// │     │     │     │     │     │     │           │     │     │     │     │     │     │
-// ├─────┼─────┼─────┼─────┼─────┼─────┤           ├─────┼─────┼─────┼─────┼─────┼─────┤
-// │ BtC │ Bt0 │ Bt1 │ Bt2 │ Bt3 │ Bt4 │           │ BtC │ Bt3 │ Bt4 │     │     │     │
-// ├─────┼─────┼─────┼─────┼─────┼─────┤           ├─────┼─────┼─────┼─────┼─────┼─────┤
-// │     │     │     │     │     │     │           │     │ Bt0 │ Bt1 │ Bt2 │     │     │
-// └─────┴─────┴─────┴──┬──┴──┬──┴──┬──┴──┐     ┌──┴──┬──┴──┬──┴──┬──┴─────┴─────┴─────┘
-//                      │     │     │     │     │     │     │     │
-//                      └─────┴─────┴─────┘     └─────┴─────┴─────┘
-
-                        bindings = <
-    &trans     &trans       &trans      &trans      &trans       &trans
-        &trans     &trans       &trans      &trans      &trans       &trans
-
-    &bt BT_CLR      &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4
-        &bt BT_CLR     &bt BT_SEL 3       &bt BT_SEL 4       &trans      &trans      &trans
-
-    &trans     &trans       &trans      &trans      &trans       &trans
-        &trans      &bt BT_SEL 0       &bt BT_SEL 1       &bt BT_SEL 2       &trans      &trans
-
-    &trans      &trans      &trans
-        &trans      &trans      &trans
-                        >;
-                };
-
-        };
-};
