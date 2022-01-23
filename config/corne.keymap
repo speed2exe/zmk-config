@@ -122,7 +122,7 @@
         &reset     &kp RGUI        &kp RSHFT        &kp RALT        &kp RCTRL      &trans
 
     &trans      &kp PIPE        &kp BSLH      &kp LBKT      &kp RBKT       &trans
-        &bootloader     &trans       &to dev      &trans      &trans       &trans
+        &bootloader     &trans       &to def      &trans      &trans       &trans
 
     &trans      &trans      &trans
         &trans      &trans      &trans
