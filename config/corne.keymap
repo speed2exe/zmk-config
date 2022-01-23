@@ -84,7 +84,7 @@
 // ├─────┼─────┼─────┼─────┼─────┼─────┤           ├─────┼─────┼─────┼─────┼─────┼─────┤
 // │     │     │     │ def │ cap │ BLd │           │     │  1  │  2  │  3  │  =  │     │
 // └─────┴─────┴─────┴──┬──┴──┬──┴──┬──┴──┐     ┌──┴──┬──┴──┬──┴──┬──┴─────┴─────┴─────┘
-//                      │     │ Tab │     │     │     │ Bsp │     │
+//                      │     │     │     │     │     │ Bsp │     │
 //                      └─────┴─────┴─────┘     └─────┴─────┴─────┘
 
                         bindings = <
@@ -97,7 +97,7 @@
     &trans     &trans       &trans      &to def      &kp CLCK       &bootloader
         &trans       &kp N1       &kp N2       &kp N3       &kp EQUAL     &trans
 
-    &trans      &kp TAB      &trans
+    &trans      &kp trans      &trans
         &trans      &kp BSPC      &trans
 
                         >;
@@ -111,7 +111,7 @@
 // ├─────┼─────┼─────┼─────┼─────┼─────┤           ├─────┼─────┼─────┼─────┼─────┼─────┤
 // │     │  |  │  \  │  [  │  ]  │     │           │ BLd │     │ def │     │     │     │
 // └─────┴─────┴─────┴──┬──┴──┬──┴──┬──┴──┐     ┌──┴──┬──┴──┬──┴──┬──┴─────┴─────┴─────┘
-//                      │     │     │     │     │     │     │     │
+//                      │     │ Tab │     │     │     │     │     │
 //                      └─────┴─────┴─────┘     └─────┴─────┴─────┘
 
                         bindings = <
@@ -124,7 +124,7 @@
     &trans      &kp PIPE        &kp BSLH      &kp LBKT      &kp RBKT       &trans
         &bootloader     &trans       &to def      &trans      &trans       &trans
 
-    &trans      &trans      &trans
+    &trans      &kp TAB      &trans
         &trans      &trans      &trans
                         >;
                 };
