@@ -98,7 +98,7 @@
         &trans       &kp N1       &kp N2       &kp N3       &kp EQUAL     &trans
 
     &trans      &trans      &trans
-        &trans      &BSPC      &trans
+        &trans      &kp BSPC      &trans
 
                         >;
                 };
@@ -124,7 +124,7 @@
     &trans      &kp PIPE        &kp BSLH      &kp LBKT      &kp RBKT       &trans
         &bootloader     &trans       &trans      &trans      &trans       &trans
 
-    &trans      &TAB      &trans
+    &trans      &kp TAB      &trans
         &trans      &trans      &trans
                         >;
                 };
