@@ -58,7 +58,7 @@
 // ├─────┼─ c ─┼─ a ─┼─ s ─┼─ g ─┼─────┤           ├─────┼─ g ─┼─ s ─┼─ a ─┼─ c ─┼─────┤
 // │     │  F  │  M  │  V  │  C  │  ?  │           │  G  │  P  │  X  │  K  │  Y  │     │
 // └─────┴─────┴─────┴──┬──┴──┬──┴──┬──┴──┐     ┌──┴──┬──┴──┬──┴──┬──┴─────┴─────┴─────┘
-//                      │     │ Spc │ Esc │     │ Ret │ Spc │     │
+//                      │     │ Spc │ Tab │     │ Bsp │ Spc │     │
 //                      └─────┴ num ┴ nav ┘     └─fn──┴ sym ┴─────┘
 
                         bindings = <
@@ -71,8 +71,8 @@
     &trans       &kp F       &kp M       &kp V       &kp C       &kp SLASH
         &kp G       &kp P       &kp X       &kp K       &kp Y       &trans
                   
-    &trans     &lt num SPACE       &lt nav ESC
-        &lt fn RET     &lt sym SPACE       &trans
+    &trans     &lt num SPACE       &lt nav TAB
+        &lt fn BSPC     &lt sym SPACE       &trans
                         >;
                 };
                 
@@ -84,7 +84,7 @@
 // ├─────┼─────┼─────┼─────┼─────┼─────┤           ├─────┼─────┼─────┼─────┼─────┼─────┤
 // │     │     │     │ cap │     │ BLd │           │     │  1  │  2  │  3  │  =  │     │
 // └─────┴─────┴─────┴──┬──┴──┬──┴──┬──┴──┐     ┌──┴──┬──┴──┬──┴──┬──┴─────┴─────┴─────┘
-//                      │     │     │     │     │ Bsp │     │     │
+//                      │     │     │     │     │ Ret │     │     │
 //                      └─────┴─────┴─────┘     └─────┴─────┴─────┘
 
                         bindings = <
@@ -98,7 +98,7 @@
         &trans       &kp N1       &kp N2       &kp N3       &kp EQUAL     &trans
 
     &trans      &trans      &trans
-        &kp BSPC      &trans      &trans
+        &kp RET      &trans      &trans
 
                         >;
                 };
@@ -111,7 +111,7 @@
 // ├─────┼─────┼─────┼─────┼─────┼─────┤           ├─────┼─────┼─────┼─────┼─────┼─────┤
 // │     │  |  │  \  │  [  │  ]  │     │           │ BLd │     │     │     │     │     │
 // └─────┴─────┴─────┴──┬──┴──┬──┴──┬──┴──┐     ┌──┴──┬──┴──┬──┴──┬──┴─────┴─────┴─────┘
-//                      │     │     │ Tab │     │     │     │     │
+//                      │     │     │ Esc │     │     │     │     │
 //                      └─────┴─────┴─────┘     └─────┴─────┴─────┘
 
                         bindings = <
@@ -124,7 +124,7 @@
     &trans      &kp PIPE        &kp BSLH      &kp LBKT      &kp RBKT       &trans
         &bootloader     &trans       &trans      &trans      &trans       &trans
 
-    &trans      &trans      &kp TAB
+    &trans      &trans      &kp ESC
         &trans      &trans      &trans
                         >;
                 };
