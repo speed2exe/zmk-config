@@ -105,26 +105,26 @@
 
                 sym {
 // ┌─────┬─────┬─────┬─────┬─────┬─────┐           ┌─────┬─────┬─────┬─────┬─────┬─────┐
-// │     │  "  │  '  │  {  │  }  │     │           │     │     │     │     │     │     │
+// │     │     │  `  │  {  │  }  │     │           │     │     │     │     │     │     │
 // ├─────┼─────┼─────┼─────┼─────┼─────┤           ├─────┼─────┼─────┼─────┼─────┼─────┤
-// │     │  ~  │  `  │  (  │  )  │     │           │ Rst │  g  │  s  │  a  │  c  │     │
+// │     │     │  '  │  (  │  )  │     │           │ Rst │  g  │  s  │  a  │  c  │     │
 // ├─────┼─────┼─────┼─────┼─────┼─────┤           ├─────┼─────┼─────┼─────┼─────┼─────┤
-// │     │  |  │  \  │  [  │  ]  │     │           │ BLd │     │     │     │     │     │
+// │     │     │  \  │  [  │  ]  │     │           │ BLd │     │     │     │     │     │
 // └─────┴─────┴─────┴──┬──┴──┬──┴──┬──┴──┐     ┌──┴──┬──┴──┬──┴──┬──┴─────┴─────┴─────┘
 //                      │     │ Tab │     │     │     │     │     │
 //                      └─────┴─────┴─────┘     └─────┴─────┴─────┘
 
                         bindings = <
-    &trans      &kp DQT        &kp SQT      &kp LBRC      &kp RBRC       &trans
+    &trans      &trans      &kp GRAVE       &kp LBRC      &kp RBRC       &trans
         &trans     &trans       &trans      &trans      &trans       &trans
 
-    &trans      &kp TILDE        &kp GRAVE      &kp LPAR      &kp RPAR       &trans
+    &trans      &trans      &kp SQT     &kp LPAR      &kp RPAR       &trans
         &reset     &kp RGUI        &kp RSHFT        &kp RALT        &kp RCTRL      &trans
 
-    &trans      &kp PIPE        &kp BSLH      &kp LBKT      &kp RBKT       &trans
+    &trans      &trans      &kp BSLH      &kp LBKT      &kp RBKT       &trans
         &bootloader     &trans       &trans      &trans      &trans       &trans
 
-    &trans      &kp TAB      &trans
+    &trans      &kp TAB     &trans
         &trans      &trans      &trans
                         >;
                 };
